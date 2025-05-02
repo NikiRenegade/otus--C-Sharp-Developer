@@ -3,7 +3,7 @@ namespace HW5_Creattional_Patterns.Entities;
 /// <summary>
 /// Класс студента, наследующийся от класса Citizen
 /// </summary>
-public class Student : Citizen, ICloneable
+public class Student : Citizen, IMyCloneable<Student>, ICloneable
 {
     /// <summary>
     /// Номер студенчиского билета
