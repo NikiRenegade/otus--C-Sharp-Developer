@@ -33,7 +33,7 @@ public class Person: IMyCloneable<Person>, ICloneable
     /// <summary>
     /// Метод IMyCloneable
     /// </summary>
-    /// <returns>Person</returns>
+    /// <returns>Человек - Person</returns>
     public virtual Person MyClone()
     {
         return new Person(FirstName, LastName, Age);
@@ -41,7 +41,7 @@ public class Person: IMyCloneable<Person>, ICloneable
     /// <summary>
     /// Метод ICloneable
     /// </summary>
-    /// <returns>object</returns>
+    /// <returns>Неизвестный объект - object</returns>
     public object Clone()
     {
         return MyClone();

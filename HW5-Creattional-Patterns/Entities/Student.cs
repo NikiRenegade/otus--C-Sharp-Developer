@@ -46,7 +46,7 @@ public class Student : Citizen, IMyCloneable<Student>, ICloneable
     /// <summary>
     /// Метод IMyCloneable
     /// </summary>
-    /// <returns>Student</returns>
+    /// <returns>Студент - Student</returns>
     public Student MyClone()
     {
         return new Student(FirstName, LastName, Age, PassportNumber, Citizenship, StudentTicketNumber, UniversityName,
@@ -56,7 +56,7 @@ public class Student : Citizen, IMyCloneable<Student>, ICloneable
     /// <summary>
     /// Метод ICloneable
     /// </summary>
-    /// <returns>object</returns>
+    /// <returns>Неизвестный объект - object</returns>
     public object Clone()
     {
         return MyClone();

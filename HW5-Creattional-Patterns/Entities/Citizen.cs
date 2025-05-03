@@ -31,7 +31,7 @@ public class Citizen: Person, IMyCloneable<Citizen>, ICloneable
     /// <summary>
     /// Метод IMyCloneable
     /// </summary>
-    /// <returns>Citizen</returns>
+    /// <returns>Гражданин - Citizen</returns>
     public Citizen MyClone()
     {
         return new Citizen(FirstName, LastName, Age, PassportNumber, Citizenship);
@@ -39,7 +39,7 @@ public class Citizen: Person, IMyCloneable<Citizen>, ICloneable
     /// <summary>
     /// Метод ICloneable
     /// </summary>
-    /// <returns>object</returns>
+    /// <returns>Неизвестный объект - object</returns>
     public object Clone()
     {
         return MyClone();
