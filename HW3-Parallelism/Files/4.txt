@@ -1,0 +1,16 @@
+if [! -d "${dir}" ]; then
+    echo "Ошибка: Указанная директория не существует."
+    exit 2
+fi
+
+for ext in "bak" "backup" "tmp"; do
+    files=("${dir}"/*."${ext}")
+    if [ -e "${files}" ]; then
+        for file in "${files[@]}"; do
+            rm "${file}"
+            echo "Удалён файл: ${file}"
+        done
+    else
+        echo "Файлы .${ext} не найдены."
+    fi
+done
