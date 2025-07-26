@@ -26,6 +26,12 @@ class Program
             new ThreadSumCalculator("Потоковый калькултор"),
             new PlinqSumCalculator("PLINQ калькулятор")
         ];
+        
+        Console.WriteLine("Информация о ПК");
+        Console.WriteLine($"Платформа: {Environment.OSVersion.Platform.ToString()}");
+        Console.WriteLine($"Версия: {Environment.OSVersion.Version.ToString()}");
+        Console.WriteLine($"Количестов процессоров: {Environment.ProcessorCount.ToString()}");
+        Console.WriteLine("\n------------------------------------------------ \n");
         foreach (ISumCalculator sumCalculator in sumCalculators)
         {
             sumCalculator.Sum(new long[] { 1, 2, 3, 4 });
