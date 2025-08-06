@@ -22,7 +22,7 @@ public class FileSearcher
 		foreach (var file in files)
 		{
 			var fileArgs = new FileArgs(file);
-			FileFound?.Invoke(this, new FileArgs(file));
+			FileFound?.Invoke(this, fileArgs);
 			if (fileArgs.IsCancel) break;
 		}
 		Console.WriteLine("Поиск завершен.");
